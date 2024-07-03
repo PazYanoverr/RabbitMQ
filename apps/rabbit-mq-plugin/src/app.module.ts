@@ -1,3 +1,4 @@
+import { RabbitMQModule } from "./rabbitmq/rabbitmq.module";
 import { Module } from "@nestjs/common";
 import { EventTypeModule } from "./eventType/eventType.module";
 import { CredentialModule } from "./credential/credential.module";
@@ -41,6 +42,7 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
 @Module({
   controllers: [],
   imports: [
+    RabbitMQModule,
     EventTypeModule,
     CredentialModule,
     DestinationCalendarModule,
